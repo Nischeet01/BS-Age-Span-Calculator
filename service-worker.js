@@ -3,9 +3,12 @@ const CACHE_NAME = "agespan-cache-v1";
 const urlsToCache = [
     "/",
     "/index.html",
+    "/style.css",
+    "/script.js",
     "/manifest.json",
     "/icon-192.png",
-    "/icon-512.png"
+    "/icon-512.png",
+    "/lib/nepali-date-converter.js"
 ];
 
 self.addEventListener("install", (event) => {
