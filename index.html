@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS Age Span Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Offline library for BS to AD conversion -->
+    <script src="lib/nepali-date-converter.js"></script>
+</head>
+
+<body>
+    <div class="card-container">
+        <header>
+            <h1>BS Age Span Calculator</h1>
+            <p class="subtitle">Enter your Bikram Sambat (BS) date of birth to calculate your exact age span.</p>
+        </header>
+
+        <main>
+            <form id="age-calculator-form">
+                <h3 class="input-section-title">Date of Birth (BS)</h3>
+                <div class="input-group-row">
+                    <div class="input-group">
+                        <label for="bs-year">Year (YYYY)</label>
+                        <input type="number" id="bs-year" placeholder="e.g. 2050" required min="1970" max="2100">
+                    </div>
+                    <div class="input-group">
+                        <label for="bs-month">Month (MM)</label>
+                        <input type="number" id="bs-month" placeholder="e.g. 01" required min="1" max="12">
+                    </div>
+                    <div class="input-group">
+                        <label for="bs-day">Day (DD)</label>
+                        <input type="number" id="bs-day" placeholder="e.g. 15" required min="1" max="32">
+                    </div>
+                </div>
+
+                <h3 class="input-section-title">Calculate Age As Of (BS)</h3>
+                <div class="input-group-row">
+                    <div class="input-group">
+                        <label for="to-bs-year">Year (YYYY)</label>
+                        <input type="number" id="to-bs-year" placeholder="e.g. 2080" required min="1970" max="2100">
+                    </div>
+                    <div class="input-group">
+                        <label for="to-bs-month">Month (MM)</label>
+                        <input type="number" id="to-bs-month" placeholder="e.g. 01" required min="1" max="12">
+                    </div>
+                    <div class="input-group">
+                        <label for="to-bs-day">Day (DD)</label>
+                        <input type="number" id="to-bs-day" placeholder="e.g. 15" required min="1" max="32">
+                    </div>
+                </div>
+
+                <div class="error-message hidden" id="error-message"></div>
+
+                <button type="submit" class="calculate-btn">Calculate Age</button>
+            </form>
+
+            <div class="result-section hidden" id="result-section">
+                <h2>Results</h2>
+                <div class="result-box">
+                    <span class="result-label">AD Date:</span>
+                    <span class="result-value" id="ad-date-result">YYYY-MM-DD</span>
+                </div>
+                <div class="result-box highlight">
+                    <span class="result-label">Age:</span>
+                    <span class="result-value" id="age-span-result">XX Years XX Months XX Days</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
